@@ -11,6 +11,10 @@ Eclipseの起動画面的なイメージです
 Windowsユーザ垂涎  
 atom-project-managerで設定されたプロジェクトを選択してAtomを起動します  
 
+## Install
+
+[こちらから](https://github.com/tomoki1207/AtomProjectLauncher/tree/master/AtomProjectLauncher/dist)
+
 ## Requirement
 
 ### Atom Packages
