@@ -93,6 +93,12 @@
     <None Include="Resources\AtomLogo128.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)dist\7zip\7za.exe a $(SolutionDir)dist\$(ProjectName).zip $(TargetDir)*</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>del $(SolutionDir)dist\$(ProjectName).zip</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
