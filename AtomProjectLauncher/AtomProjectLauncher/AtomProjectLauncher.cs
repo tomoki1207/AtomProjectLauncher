@@ -53,6 +53,7 @@ namespace AtomProjectLauncher
             }
 
             this.comboProjectName.DataSource = combo;
+            this.comboProjectName.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -63,7 +64,13 @@ namespace AtomProjectLauncher
         private void btnOK_Click(object sender, EventArgs e)
         {
             var project = this.comboProjectName.SelectedItem as ProjectComboBoxItem;
-            
+
+            if (project == null)
+            {
+                MessageBox.Show(string.Format("プロジェクト{0}が見つかりません", this.comboProjectName.Text), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 var process = new ProcessStartInfo();

@@ -54,6 +54,7 @@
             // 
             this.comboProjectName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboProjectName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboProjectName.BackColor = System.Drawing.SystemColors.Control;
             this.comboProjectName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboProjectName.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
